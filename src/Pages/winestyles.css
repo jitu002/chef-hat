@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .discover{
+    height: 50vh;
+    width: 100%;
+    border: solid 3px white;
+    margin-top: 30px;
+    background-image: url("../Resources/wine/wiinn.jpg");
+  }
+  .discover-text h1{
+    color: #002684;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Chronicle Deck", "Times", serif;
+    font-weight: 900;
+    line-height: 1.05;
+  }
+  .discover-text h2{
+    color: #00a0df;
+    text-align: center;
+    margin-top: 16px;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+  .btn{
+    padding:30px 80px 30px 80px;
+    width: 110px;
+    height: 40px;
+    color: aliceblue;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #002684;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 27px;
+    font-family: Audiowide;
+    font-size: 18px;
+    line-height: 1.15;
+    letter-spacing: 2px;
+  }
+  .btn:hover{
+    background-color:rgb(124, 233, 255);
+    color: #0a1f54;
+  }
+  .discover-text{
+    margin-top: 175px;
+    margin-left: 990px;
+  }
+  .how{
+    height: 500px;
+    width: 1434px;
+    border: solid 3px white;
+    margin-top: 30px;
+    
+    
+  }
+  .how-text{
+    width: 500px;
+    height: 20px;
+    border: solid 3px white;
+    text-align: left;
+    margin-top: 50px ;
+    margin-left: 600px;
+    font-weight: 600;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    color: #303236;
+  }
+  .incredible{
+    height: 380px;
+    width: 400px;
+    border: solid 3px white;
+    margin: 10px;
+    margin-left: 90px;
+    margin-top: 50px;
+  }
+  .monthly{
+    height: 380px;
+    width: 400px;
+    border: solid 3px white;
+    margin: 10px;
+    margin-top: -397px;
+    margin-left: 518px;
+  }  
+  .sized{
+    height: 380px;
+    width: 400px;
+    border: solid 3px white;
+    margin: 10px;
+    margin-left: 950px;
+    margin-top: -397px;
+  } 
+  .how {
+    text-align: center;
+  }
+  .heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    color: #303236;
+  }
+  
+  .content{
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-size: 50px;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    background-color: #ffffff;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-align: center;
+    zoom: 1;
+    overflow-x: hidden;
+  }
+  .inside{
+    height: 80vh;
+    width: 98%;
+    border: solid 3px rgb(251, 248, 248);
+    margin-top: 30px;
+    margin-left: 1%;
+    background-repeat: no-repeat;
+    background-image: url("../Resources/wine/inside.jpeg");
+  }
+  .insidepart{
+    height: 510px;
+    width: 513px;
+    margin-left: 30%;
+    margin-top: 2%;
+    background-color: white;
+  }
+  .insidepart h2{
+    margin-left: 30px;
+    color: #00a0df;
+    text-align: left;
+    font-size: 40px;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+  }
+  .insidepart li{
+    color: black;
+    margin-top: 20px;
+    margin-left: 30px;
+    position: relative;
+    left: 12px;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin-right: 12px;
+    margin-bottom: 16px;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 18px;
+    text-align: left;
+  }
+  .insidepart h3{
+    color: #00a0df;
+    margin-left: 30px;
+    font-size: 25px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  }
+  .insidepart h4{
+    color: black;
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 30px; 
+  }
+  .insidepart h5{
+    color: black;
+    text-align: left;
+    font-size: 10px;
+    margin-top: 0px;
+    margin-left: 30px; 
+  }
+  .vineyard{
+    height: 700px;
+    width: 1434px;
+    border: rgb(251, 248, 248) 2px solid;
+    margin-top: 30px;
+  }
+  .vineyard h2{
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 1.2;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    color: #303236;
+  }
+  .vineyard p{
+    color: gray;
+    text-align: center;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+  .pic{
+    height: 500px;
+    width: 1430px;
+  }
+  .favourites{
+    height: 80vh;
+    width: 100%;
+    border: solid 2px rgb(246, 242, 242);
+    margin-top: 30px;
+    background-image: url("../Resources/wine/favo.jpeg");
+  }
+  .favourites h2{
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    margin-top: 80px;
+    margin-left: 550px;
+  }
+  .favourites p{
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    margin-top: 30px;
+    margin-left: 550px;
+  }
+  .elevate{
+    height: 1000px;
+    width: 1434px;
+    border: white 2px solid;
+    margin-top: 30px;
+  }
+  .elev-text h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    color: #303236;
+    margin-top: 40px;
+  }
+  .elev-text p{
+    text-align: center;
+    color: gray;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 200;
+  }
+  .elev-text h6{
+    color: white;
+  }
+  .elev-bottle{
+    height: 100%;
+    width: 100%;
+    border: white 2px solid;
+    margin: 10px;
+    margin-bottom: 20px;
+    background-image: url("../Resources/wine/bottle.png");
+  }
+  .beef{
+    height: 300px;
+    width: 540px;
+    border: white 2px solid;
+    margin-top: 100px;
+    margin-left: 60px;
+  }
+  .chops{
+    height: 300px;
+    width: 540px;
+    border: white 2px solid;
+    margin-top: -305px;
+    margin-left:  810px;
+  }
+  .potato{
+    height: 300px;
+    width: 540px;
+    border: white 2px solid;
+    margin-top: 50px;
+    margin-left: 60px;
+  }
+  .sauce{
+    height: 300px;
+    width: 540px;
+    border: white 2px solid;
+    margin-left: 810px;
+    margin-top: -305px;
+  }
+  .pics{
+    height: 180px;
+    width: 180x;
+    margin-left: 150px;
+  }
+  .elev-bottle h5{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #002684;
+    margin: 10px 0 0;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    text-align: center;
+  }
+  .about {
+    font-size: 17px;
+    line-height: 1.37;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .glass{
+    height: 60vh;
+    background-repeat:no-repeat;
+    width: 97%;
+    padding-top: 2%;
+    margin-top: 40px;
+    margin-left: 5px;
+    background-image: url("../Resources/wine/glass.png");
+  }
+  .glass h1{
+    color: white;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    margin-top: 160px;
+  }
+  .btn1{
+    width: 180px;
+    height: 40px;
+    color: #002684;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 27px;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 1.15;
+    letter-spacing: 2px;
+  
+  }
+  .btn1:hover{
+    background-color: #002684;
+    color: #ffffff;
+  }
+  
