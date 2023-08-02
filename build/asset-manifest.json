@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.90fd7d24.css",
+    "main.js": "/static/js/main.21171f95.js",
+    "static/media/inside.jpeg": "/static/media/inside.086e1dd53a4cbcc7af75.jpeg",
+    "static/media/favo.jpeg": "/static/media/favo.654cdbd26072f6c54537.jpeg",
+    "static/media/glass.png": "/static/media/glass.12b76de3597b1394430d.png",
+    "static/media/wiinn.jpg": "/static/media/wiinn.e4b3126d0c9f6087709d.jpg",
+    "static/media/ajit.jpg": "/static/media/ajit.c13e9983fefec3b0f4a7.jpg",
+    "static/media/sauce.png": "/static/media/sauce.75a51fc06edf57d6f6b0.png",
+    "static/media/homeimage.jpeg": "/static/media/homeimage.17ba932bc5bd30f61400.jpeg",
+    "static/media/chops.png": "/static/media/chops.55701b5949d3d9d90182.png",
+    "static/media/beef.png": "/static/media/beef.de55dd6e9697f12748d7.png",
+    "static/media/potato.png": "/static/media/potato.fb431c6a1fc41381cb25.png",
+    "static/media/cooking-pot.webp": "/static/media/cooking-pot.bb61746945600ed7c54a.webp",
+    "static/media/prayas.jpg": "/static/media/prayas.1796fea5e84bb3292f5b.jpg",
+    "static/media/mki.jpg": "/static/media/mki.1bf36c414299fe86d0f7.jpg",
+    "static/media/bottle.png": "/static/media/bottle.6e70ea82b0ccca92e7c6.png",
+    "static/media/raj.jpg": "/static/media/raj.59ca58af9ddd4d2e9c87.jpg",
+    "static/media/vineyard.png": "/static/media/vineyard.c446b55cb14280f00800.png",
+    "static/media/subashis.jpg": "/static/media/subashis.0ad137596f60862f940f.jpg",
+    "static/media/shreya.jpg": "/static/media/shreya.3f7d3eb09ea6e5b6e4bc.jpg",
+    "static/media/chef-hat.png": "/static/media/chef-hat.8e43a5d3182229797b1d.png",
+    "index.html": "/index.html",
+    "main.90fd7d24.css.map": "/static/css/main.90fd7d24.css.map",
+    "main.21171f95.js.map": "/static/js/main.21171f95.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90fd7d24.css",
+    "static/js/main.21171f95.js"
+  ]
+}
