@@ -146,9 +146,11 @@ export const Navbar=()=>{
       <Box bg={useColorModeValue("gray.100","gray.900")} pl={"13%"} justifyContent={"center"}>
         <Flex>
           <NavLink className="items" to="/">
-            <Image src={chefhat} boxSize={{lg:"160px",md:"60px",base:"30px"}} marginBottom={{base:"10px"}} marginLeft={{base:"10px"}} className="imgeffect" />               
+            <Image src={chefhat} boxSize={{lg:"160px",md:"60px",base:"60px"}}  marginLeft={{base:"5px"}} className="imgeffect" />               
           </NavLink>
           <IconButton
+            marginTop="10%"
+            marginLeft="50%"
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
@@ -158,7 +160,8 @@ export const Navbar=()=>{
           <HStack spacing={4} alignItems={"center"}>
             <HStack
               as={"nav"}
-              spacing={8}
+              marginLeft="2%"
+              spacing={{lg:"20",md:"19",base:"10"}}
               display={{ base: "none", md: "flex" }}
             > 
               <NavLink className="items" to="/FoodMenu">
@@ -217,8 +220,30 @@ export const Navbar=()=>{
                   </Modal>
                 </MenuList>
               </Menu>
-            </> :<>
-                  <Button ref={btnRef} colorScheme='orange' onClick={signupOnopen}>
+            </> :null }
+
+          </HStack>
+        </Flex>
+        {
+          isOpen ? (
+            <Box pb={4} display={{md:'flex'}}>
+              <Stack> 
+                <NavLink className="items" to="/FoodMenu">
+                  ON THE MENU
+                </NavLink>
+                <NavLink className="items" to="/Plans">
+                  PLANS
+                </NavLink>
+                <NavLink className="items" to="/Wine">
+                  WINE
+                </NavLink>
+                <NavLink className="items" to="/cart">
+                  CHECKOUT
+                </NavLink>
+                <NavLink className="items" to="/Gifts">
+                  GIFTS
+                </NavLink>
+                <Button ref={btnRef} colorScheme='orange' onClick={signupOnopen}>
                     SIGNUP
                   </Button>
                   <Drawer
@@ -303,33 +328,6 @@ export const Navbar=()=>{
                       <PopoverBody><Button colorScheme="teal" onClick={submitlogin}>Login</Button></PopoverBody>
                     </PopoverContent>
                   </Popover>
-                  </> }
-
-              <Button variant="outline" colorScheme="blue.900" onClick={toggleColorMode}>
-                {colorMode === 'light' ? <SunIcon/> : <MoonIcon /> }
-              </Button>
-
-          </HStack>
-        </Flex>
-        {
-          isOpen ? (
-            <Box pb={4} display={{md:'flex'}}>
-              <Stack> 
-                <NavLink className="items" to="/FoodMenu">
-                  ON THE MENU
-                </NavLink>
-                <NavLink className="items" to="/Plans">
-                  PLANS
-                </NavLink>
-                <NavLink className="items" to="/Wine">
-                  WINE
-                </NavLink>
-                <NavLink className="items" to="/cart">
-                  CHECKOUT
-                </NavLink>
-                <NavLink className="items" to="/Gifts">
-                  GIFTS
-                </NavLink>
                 <Button variant="outline" colorScheme="blue.900" onClick={toggleColorMode}>
                   {colorMode === 'light' ? <SunIcon/> : <MoonIcon /> }
                 </Button>

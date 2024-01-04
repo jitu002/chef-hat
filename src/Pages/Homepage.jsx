@@ -1,4 +1,4 @@
-import { Text,Card,CardBody,Image,Stack,Heading,SimpleGrid,Center, Avatar } from '@chakra-ui/react'
+import { Text,Card,CardBody,Image,Stack,Heading,SimpleGrid,Center,Avatar,Button } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -29,11 +29,11 @@ export const Homepage = () => {
     <div>
       <div className="body">
         <div className="welcome">
-          <Text  fontSize="7xl">
-            The meal kit that
+          <Text  fontSize={{lg:"7xl",md:"6xl",base:"5xl"}}>
+            The meal kit <br /> that
           </Text>
-          <Text  fontSize="6xl">
-            put's quality first
+          <Text  fontSize={{lg:"7xl",md:"6xl",base:"5xl"}}>
+            put's quality <br /> first
           </Text>
           <button className="planbtn" onClick={()=>
           {
@@ -42,15 +42,15 @@ export const Homepage = () => {
         </div>
       </div>
       <div className="advfeature">
-        <Text  fontSize="5xl" color="Blue">
+        <Text  fontSize={{lg:"7xl",md:"6xl",base:"5xl"}} color="Blue">
           465+ million meal's shipped
         </Text>
-        <Text  fontSize="3xl">
+        <Text  fontSize={{lg:"5xl",md:"3xl",base:"2xl"}}>
           See why home cooks stick with the <br /> original American meal kit.
         </Text>
       </div>
-      <div className="features">
-        <Card maxW='sm' >
+      <SimpleGrid marginLeft="5%"  minChildWidth='200px' spacing='15px'>
+      <Card maxW='sm' >
           <CardBody>
             <Image
               src='https://media.blueapron.com/assets/registration/homepage/chef-experience.webp?height=374&quality=90'
@@ -95,9 +95,10 @@ export const Homepage = () => {
             </Stack>
           </CardBody>
         </Card>
-      </div>
+      </SimpleGrid>
+      
       <div className="adv">
-      <Text  fontSize="2xl">
+      <Text  fontSize={{lg:"7xl",md:"5xl",base:"2xl"}}>
         Get started for as little as <b>$7.99 per serving</b>
       </Text>
       <button className="planbtn1" onClick={()=>
@@ -106,7 +107,7 @@ export const Homepage = () => {
           }}>See Plans</button>
       </div>
       <div className="menu">
-        <Text fontSize="5xl" color="cyan">
+        <Text fontSize={{lg:"7xl",md:"6xl",base:"5xl"}} color="cyan">
           70+ weekly options
         </Text>
         <div>
@@ -116,10 +117,10 @@ export const Homepage = () => {
             })}
           </SimpleGrid>
         </div>
-        <button className="planbtn2" onClick={()=>
+        <Button variant="outline" _hover={{bg:"#0BC5EA",color:"black"}} borderRadius="40px" padding="50px" marginTop={{lg:"20%",md:"40%",base:"70%"}} marginBottom={{lg:"5%",md:"7%",base:"9%"}} onClick={()=>
           {
             window.location='http://localhost:3001/FoodMenu'
-          }}>BROWSE OUR MENUS</button>
+          }}>BROWSE OUR MENUS</Button>
       </div>
       <div className="swiper1">
         <Swiper
@@ -144,11 +145,11 @@ export const Homepage = () => {
         >
           <SwiperSlide>
             <Center>
-            <Card maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'200px'}} margin className="revcard" bg={'white'}>
+            <Card maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'160px',base:"50px"}} marginLeft={{lg:"200px",md:"160px",base:"50px"}} marginTop={{lg:"100px",md:"50px",base:"30px"}} className="revcard" bg={'white'}>
               <CardBody>
-                <Stack mt='9' spacing='6' className='banner'>
+                <Stack mt='6' spacing='3' className='banner'>
                   <Heading size='md'>Celebrating 10 years of happy customers</Heading>
-                  <Text>
+                  <Text fontSize={{lg:"18px",md:"16px",base:"14px"}}>
                   Before Blue Apron, I tried HelloFresh. <br /> Blue Apron beats them on all counts— <br /> directions, freshness, packing, and prep. <br />-Ajit
                   </Text>
                 </Stack>
@@ -158,11 +159,11 @@ export const Homepage = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Center>
-            <Card  maxW='lg' className="revcard" bg={'white'}>
+            <Card maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'160px',base:"50px"}} marginLeft={{lg:"200px",md:"160px",base:"50px"}} marginTop={{lg:"100px",md:"50px",base:"30px"}} className="revcard" bg={'white'}>
               <CardBody>
                 <Stack mt='9' spacing='6' className='banner'>
                   <Heading size='md'>Celebrating 10 years of happy customers</Heading>
-                  <Text>
+                  <Text fontSize={{lg:"18px",md:"16px",base:"14px"}}>
                   We changed from HelloFresh to Blue Apron and <br /> it was the best choice we made! <br />-Prayas
                   </Text>
                 </Stack>
@@ -172,12 +173,12 @@ export const Homepage = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Center>
-            <Card  maxW="lg" className="revcard" bg={'white'}>
+            <Card maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'160px',base:"50px"}} marginLeft={{lg:"200px",md:"160px",base:"50px"}} marginTop={{lg:"100px",md:"50px",base:"30px"}} className="revcard" bg={'white'}>
               <CardBody>
                 <Stack mt='9' spacing='6' className='banner'>
                   <Heading size='md'>Celebrating 10 years of happy customers</Heading>
-                    <Text>
-                      We love Blue Apron! <br /> It eliminates a ton of food waste while allowing us to try new things and have tasty meals. <br /> Really great quality food, awesome flavors, and <br /> things we wouldn't otherwise have any idea how to create. <br />-Shreya
+                    <Text fontSize={{lg:"18px",md:"16px",base:"14px"}}>
+                      We love Blue Apron! <br /> It eliminates a ton of food waste while allowing us to try new things and have tasty meals.Really great quality food, awesome flavors, and <br /> things we wouldn't otherwise have any idea how to create. <br />-Shreya
                     </Text>
                 </Stack>
               </CardBody>
@@ -186,11 +187,11 @@ export const Homepage = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Center>
-            <Card  maxW="lg" className="revcard" bg={'white'}>
+            <Card  maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'160px',base:"50px"}} marginLeft={{lg:"200px",md:"160px",base:"50px"}} marginTop={{lg:"100px",md:"50px",base:"30px"}} className="revcard" bg={'white'}>
               <CardBody>
                 <Stack mt='9' spacing='6' className='banner'>
                   <Heading size='md'>Celebrating 10 years of happy customers</Heading>
-                    <Text>
+                    <Text fontSize={{lg:"18px",md:"16px",base:"14px"}}>
                       We'd tried many other food delivery services <br /> and none of them have compared in quality and variety to Blue Apron. <br />-Basudha
                     </Text>
                 </Stack>
@@ -203,10 +204,10 @@ export const Homepage = () => {
       <div className="carbon">
         <div>
           <Avatar src="https://media.blueapron.com/assets/registration/homepage/hand-icon.svg" alt="hand"  />
-          <Text  fontSize="4xl">
+          <Text  fontSize={{lg:"7xl",md:"5xl",base:"2xl"}}>
             We're proud to be a
           </Text>
-          <Text className="banner"  fontSize="4xl">
+          <Text className="banner"  fontSize={{lg:"7xl",md:"5xl",base:"2xl"}}>
             CARBON NEUTRAL COMPANY
           </Text>
         </div>
