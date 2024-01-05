@@ -6,15 +6,16 @@ Button{
   font-family: Audiowide
 }
   .items {
+    position: sticky;
     font-size: 18px;
     padding-top: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   .items:hover {
-    font-size: 20px;
     color: rgb(80, 154, 219);
     transition: 0.3s ease-in-out;
-    text-decoration: underline;
+    border-bottom: 2px solid  rgb(80, 154, 219);;
+    padding: 2px;
   }
   .footerdsgn{
     background-color:rgb(0, 61, 94);
@@ -29,7 +30,7 @@ Button{
   }
   .imgeffect:hover{
     transition: 0.3s ease-in-out;
-    transform: scale(1.1);
+  
   }
 
   .divider{
@@ -40,3 +41,36 @@ Button{
     grid-template-columns: auto auto auto;
     column-gap: 10px;
   }
+  @media only screen and (min-width: 35.8em) {
+   
+  }
+  
+  @media only screen and (min-width: 60.625em) {
+    
+  }
+  
+  @media only screen and (max-width: 600px) {  
+      
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {}
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    .items{
+      font-size: 12px;
+    }
+
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 768px) and (max-width:1024px) {
+    .items{
+      font-size: 14px;
+    }
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {}
+  

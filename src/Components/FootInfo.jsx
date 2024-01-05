@@ -1,21 +1,23 @@
 import { Text,Divider, Center } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter,faPinterest } from '@fortawesome/free-brands-svg-icons';
+import "./styles.css"
+
 
 export const FootInfo=()=>{
     return(
         <div className="divider">
             <div className='icons'>
-                <FontAwesomeIcon icon={faFacebook} size='2xl' />
-                <FontAwesomeIcon icon={faInstagram} size="2xl" />
-                <FontAwesomeIcon icon={faTwitter} size="2xl" />
-                <FontAwesomeIcon icon={faPinterest} size="2xl" />
+                <FontAwesomeIcon icon={faFacebook} size="1x" />
+                <FontAwesomeIcon icon={faInstagram} size="1x" />
+                <FontAwesomeIcon icon={faTwitter} size="1x" />
+                <FontAwesomeIcon icon={faPinterest} size="1x" />
             </div>
             <Center height='50px'>
                 <Divider orientation='vertical' />
             </Center>
             <div className='search'>
-                <Text  fontSize="2xl">
+                <Text  fontSize={{lg:"2xl",md:"xl",base:"md"}}>
                     Discover What's Cooking
                 </Text>
                 <input type="email" placeholder='Enter your @ email' />
@@ -24,7 +26,7 @@ export const FootInfo=()=>{
                     <Divider orientation='vertical' />
                 </Center>
             <div className='search'>
-                <Text  fontSize="3xl">
+                <Text  fontSize={{lg:"2xl",md:"xl",base:"md"}}>
                     Taste the best
                 </Text>
             </div>

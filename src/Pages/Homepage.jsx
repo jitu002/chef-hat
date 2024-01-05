@@ -117,7 +117,7 @@ export const Homepage = () => {
             })}
           </SimpleGrid>
         </div>
-        <Button variant="outline" _hover={{bg:"#0BC5EA",color:"black"}} borderRadius="40px" padding="50px" marginTop={{lg:"20%",md:"40%",base:"70%"}} marginBottom={{lg:"5%",md:"7%",base:"9%"}} onClick={()=>
+        <Button variant="outline" _hover={{bg:"#0BC5EA",color:"black",transition:"0.3s ease-in-out"}} fontFamily="Audiowide" borderRadius="40px" padding="50px" marginTop={{lg:"20%",md:"40%",base:"70%"}} marginBottom={{lg:"5%",md:"7%",base:"9%"}} onClick={()=>
           {
             window.location='http://localhost:3001/FoodMenu'
           }}>BROWSE OUR MENUS</Button>
@@ -147,7 +147,7 @@ export const Homepage = () => {
             <Center>
             <Card maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'160px',base:"50px"}} marginLeft={{lg:"200px",md:"160px",base:"50px"}} marginTop={{lg:"100px",md:"50px",base:"30px"}} className="revcard" bg={'white'}>
               <CardBody>
-                <Stack mt='6' spacing='3' className='banner'>
+                <Stack mt='6' spacing='3' color="#1A365D">
                   <Heading size='md'>Celebrating 10 years of happy customers</Heading>
                   <Text fontSize={{lg:"18px",md:"16px",base:"14px"}}>
                   Before Blue Apron, I tried HelloFresh. <br /> Blue Apron beats them on all counts— <br /> directions, freshness, packing, and prep. <br />-Ajit
@@ -161,7 +161,7 @@ export const Homepage = () => {
             <Center>
             <Card maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'160px',base:"50px"}} marginLeft={{lg:"200px",md:"160px",base:"50px"}} marginTop={{lg:"100px",md:"50px",base:"30px"}} className="revcard" bg={'white'}>
               <CardBody>
-                <Stack mt='9' spacing='6' className='banner'>
+                <Stack mt='9' spacing='6' color="#1A365D">
                   <Heading size='md'>Celebrating 10 years of happy customers</Heading>
                   <Text fontSize={{lg:"18px",md:"16px",base:"14px"}}>
                   We changed from HelloFresh to Blue Apron and <br /> it was the best choice we made! <br />-Prayas
@@ -175,7 +175,7 @@ export const Homepage = () => {
             <Center>
             <Card maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'160px',base:"50px"}} marginLeft={{lg:"200px",md:"160px",base:"50px"}} marginTop={{lg:"100px",md:"50px",base:"30px"}} className="revcard" bg={'white'}>
               <CardBody>
-                <Stack mt='9' spacing='6' className='banner'>
+                <Stack mt='9' spacing='6' color="#1A365D">
                   <Heading size='md'>Celebrating 10 years of happy customers</Heading>
                     <Text fontSize={{lg:"18px",md:"16px",base:"14px"}}>
                       We love Blue Apron! <br /> It eliminates a ton of food waste while allowing us to try new things and have tasty meals.Really great quality food, awesome flavors, and <br /> things we wouldn't otherwise have any idea how to create. <br />-Shreya
@@ -189,7 +189,7 @@ export const Homepage = () => {
             <Center>
             <Card  maxW={{lg:'lg',md:'md',base:'sm'}} marginRight={{md:'160px',base:"50px"}} marginLeft={{lg:"200px",md:"160px",base:"50px"}} marginTop={{lg:"100px",md:"50px",base:"30px"}} className="revcard" bg={'white'}>
               <CardBody>
-                <Stack mt='9' spacing='6' className='banner'>
+                <Stack mt='9' spacing='6' color="#1A365D">
                   <Heading size='md'>Celebrating 10 years of happy customers</Heading>
                     <Text fontSize={{lg:"18px",md:"16px",base:"14px"}}>
                       We'd tried many other food delivery services <br /> and none of them have compared in quality and variety to Blue Apron. <br />-Basudha
@@ -204,20 +204,21 @@ export const Homepage = () => {
       <div className="carbon">
         <div>
           <Avatar src="https://media.blueapron.com/assets/registration/homepage/hand-icon.svg" alt="hand"  />
-          <Text  fontSize={{lg:"7xl",md:"5xl",base:"2xl"}}>
+          <Text color="#1A365D"  fontSize={{lg:"5xl",md:"3xl",base:"xl"}}>
             We're proud to be a
           </Text>
-          <Text className="banner"  fontSize={{lg:"7xl",md:"5xl",base:"2xl"}}>
+          <Text color="#1A365D"  fontSize={{lg:"3xl",md:"2xl",base:"lg"}}>
             CARBON NEUTRAL COMPANY
           </Text>
         </div>
       </div>
       <div className="getstarted">
-        <Card maxW="md" className="startcard" bg={'white'}>
+        <Center>
+        <Card maxW={{lg:'lg',md:'md',base:'sm'}} marginLeft={{base:"20%"}} marginRight={{md:"15%"}} bg={'white'}>
           <CardBody>
-            <Stack mt='9' spacing='6'>
-              <Heading size='lg' className='banner'>Get  started now</Heading>
-                <Text className='banner'>
+            <Stack mt='6' spacing='3'>
+              <Heading size={{lg:"lg",md:"md",base:"sm"}} color="#1A365D">Get  started now</Heading>
+                <Text fontSize={{lg:"2xl",md:"lg",base:"md"}} color="#1A365D">
                   for as little as <b>$7.99 per serving</b>
                 </Text>
             </Stack>
@@ -227,6 +228,8 @@ export const Homepage = () => {
             window.location='http://localhost:3001/Plans'
           }}>See plans</button>
         </Card>
+        </Center>
+        
       </div>
     </div>
   );

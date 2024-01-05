@@ -145,11 +145,11 @@ export const Navbar=()=>{
     <div>
       <Box bg={useColorModeValue("gray.100","gray.900")} pl={"13%"} justifyContent={"center"}>
         <Flex>
-          <NavLink className="items" to="/">
-            <Image src={chefhat} boxSize={{lg:"160px",md:"60px",base:"60px"}}  marginLeft={{base:"5px"}} className="imgeffect" />               
+          <NavLink to="/">
+            <Image marginTop="5%" src={chefhat} boxSize={{lg:"160px",md:"60px",base:"60px"}}  className="imgeffect" />               
           </NavLink>
           <IconButton
-            marginTop="10%"
+            marginTop="5%"
             marginLeft="50%"
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -160,8 +160,8 @@ export const Navbar=()=>{
           <HStack spacing={4} alignItems={"center"}>
             <HStack
               as={"nav"}
-              marginLeft="2%"
-              spacing={{lg:"20",md:"19",base:"10"}}
+              marginLeft="1%"
+              spacing={{lg:"10",md:"5",base:"3"}}
               display={{ base: "none", md: "flex" }}
             > 
               <NavLink className="items" to="/FoodMenu">
@@ -179,6 +179,94 @@ export const Navbar=()=>{
               <NavLink className="items" to="/Gifts">
                 GIFTS
               </NavLink>
+                  <Button size={{lg:"md",md:"sm",base:"sm"}} fontSize={{lg:"16px",md:"14px",base:"12px"}} ref={btnRef} colorScheme='orange' onClick={signupOnopen}>
+                    SIGNUP
+                  </Button>
+                  <Drawer
+                    isOpen={signupIsopen}
+                    placement='right'
+                    onClose={signupOnclose}
+                    finalFocusRef={btnRef}
+                  >
+                    <DrawerOverlay />
+                    <DrawerContent spacing="3">
+                      <DrawerCloseButton />
+                      <DrawerHeader>Create your account</DrawerHeader>
+
+                      <DrawerBody>
+                        <Stack spacing="3">
+                          <Input placeholder='Name...' value={name} onChange={(e)=>{
+                            setName(e.target.value)
+                          }} />
+                          <Input value={user} onChange={(e)=>{
+                            setUser(e.target.value)
+                          }} placeholder='Username...' />
+                          <Input value={email} onChange={(e)=>{
+                            setEmail(e.target.value)
+                          }} placeholder='Email...' />
+                          <InputGroup size='md'>
+                            <Input
+                              pr='4.5rem'
+                              type={show ? 'text' : 'password'}
+                              placeholder='Enter password'
+                              value={pass} onChange={(e)=>{
+                              setPass(e.target.value)
+                              }} 
+                            />
+                            <InputRightElement width='4.5rem'>
+                              <Button  h='1.75rem' size='sm' marginBottom="5px" onClick={handleClick}>
+                                {show ? 'Hide' : 'Show'}
+                              </Button>
+                            </InputRightElement>
+                          </InputGroup>
+                        </Stack>
+                      </DrawerBody>
+
+                      <DrawerFooter>
+                        <Button variant='outline' mr={3} onClick={signupOnclose}>
+                          Cancel
+                        </Button>
+                        <Button colorScheme='blue' onClick={SubmitEvent}>
+                          Create Account
+                        </Button>
+                      </DrawerFooter>
+                    </DrawerContent>
+                  </Drawer>
+                  <Popover>
+                    <PopoverTrigger>
+                      <Button size={{lg:"md",md:"sm",base:"sm"}} fontSize={{lg:"16px",md:"14px",base:"12px"}} colorScheme="teal">LOGIN</Button>
+                    </PopoverTrigger>
+                    <PopoverContent colorScheme="teal">
+                      <PopoverArrow />
+                      <PopoverHeader>
+                          <Input value={user} onChange={(e)=>{
+                            setUser(e.target.value)
+                          }} placeholder='Username...' marginBottom={'10px'} />
+                          <Input value={email} onChange={(e)=>{
+                            setEmail(e.target.value)
+                          }} placeholder='Email...' marginBottom={'10px'} />
+                          <InputGroup size='md'>
+                            <Input
+                              marginBottom={'10px'}
+                              pr='4.5rem'
+                              type={show ? 'text' : 'password'}
+                              placeholder='Enter password'
+                              value={pass} onChange={(e)=>{
+                              setPass(e.target.value)
+                              }}/>
+                              <InputRightElement width='4.5rem'>
+                              <Button h='1.75rem' size='sm' marginBottom="45px" onClick={handleClick}>
+                                {show ? 'Hide' : 'Show'}
+                              </Button>
+                            </InputRightElement>
+                          </InputGroup>
+                        </PopoverHeader>
+                      <PopoverBody><Button colorScheme="teal" onClick={submitlogin}>Login</Button></PopoverBody>
+                    </PopoverContent>
+                  </Popover>
+                <Button size={{lg:"md",md:"sm",base:"sm"}}  variant="outline" colorScheme="blue.900" onClick={toggleColorMode}>
+                  {colorMode === 'light' ? <SunIcon/> : <MoonIcon /> }
+                </Button>
               </HStack>
               {isLogin ? 
               <>
