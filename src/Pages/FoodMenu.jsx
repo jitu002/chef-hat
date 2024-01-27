@@ -23,17 +23,17 @@ export const FoodMenu = () => {
   return (
     <div className="menubody">
       <div className="head">
-        <Text  fontSize="7xl" className="banner1" color={color}>
+        <Text  fontSize={{lg:"7xl",md:"5xl",base:"2xl"}} className="banner1" color={color}>
           Explore Our Exotic Menu
         </Text>
       </div>
       <div>
       <Tabs isFitted position="relative" variant="unstyled">
         <TabList className="filter">
-          <Tab className="option" fontSize={"3xl"}>All</Tab>
-          <Tab className="option" fontSize={"3xl"}>₹400-₹1000</Tab>
-          <Tab className="option" fontSize={"3xl"}>₹1000-₹4000</Tab>
-          <Tab className="option" fontSize={"3xl"}>More than ₹4000</Tab>
+          <Tab className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>All</Tab>
+          <Tab className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>₹400-₹1000</Tab>
+          <Tab className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>₹1000-₹4000</Tab>
+          <Tab className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>More than ₹4000</Tab>
         </TabList>
         <TabIndicator
           mt="-1.5px"

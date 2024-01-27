@@ -1,12 +1,51 @@
-import { Text,SimpleGrid,Divider,Center,Box,Checkbox,Tabs,
-    TabList,Tab,TabPanels,TabPanel,Container,Accordion,
+import { Text,SimpleGrid,Center,Box,Avatar,
+    Container,Accordion,Button,AccordionIcon,
     AccordionItem,AccordionButton,AccordionPanel,useColorMode,useColorModeValue
 } from "@chakra-ui/react"
 import { useState,useEffect } from "react";
 import { AddIcon,MinusIcon } from "@chakra-ui/icons"
+import "./styles.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import hat from "../Resources/icons/chef.png"
+import wellness from "../Resources/icons/vegan.png"
+import family from "../Resources/icons/family.png"
+import watch from "../Resources/icons/stopwatch.png"
+import veggies from "../Resources/icons/vegetables.png"
+import chefhat from "../Resources/chef-hat.png"
+import sustainable from "../Resources/icons/planet-earth.png"
+import calender from "../Resources/icons/calendar.png"
+import safety from "../Resources/icons/food-safety.png"
+
+
 export const Plans=()=>{
 
     const api ="http://localhost:3000/accordions";
+
+    const chkbox=[
+        {
+            "icon":hat,
+            "name":"Chef Favorites"
+        },
+        {
+            "icon":wellness,
+            "name":"Wellness"
+        },
+        {
+            "icon":family,
+            "name":"Family Friendly"
+        },
+        {
+            "icon":watch,
+            "name":"Fast & Easy"
+        },
+        {
+            "icon":veggies,
+            "name":"Veggies"
+        }
+    ]
+
+
+
 
     const [fData, setFData] = useState([]);
 
@@ -30,124 +69,88 @@ export const Plans=()=>{
     return(
         <div>
             <div className="planshead">
-                <Text fontSize="4xl" color={color}>Personalize your meal kit</Text>
-                <Text fontSize="2xl" color={color}>Get excited -your choice of 70+ weekly meals is just a few steps away!
+                <Text fontSize={{lg:"4xl",md:"2xl",base:"lg"}} color={color}> <b>Personalize your meal kit</b></Text>
+                <Text fontSize={{lg:"2xl",md:"2xl",base:"lg"}} color={color}>Get excited -your choice of 70+ weekly meals is just a few steps away!
                 </Text>
             </div>
             <Center>
-            <Box className="plancard" paddingLeft={{base:'50px',md:'200px',lg:"350px"}} paddingRight={{base:'50px',md:'200',lg:"250px"}}>
-                <div className="prefleft">
-                    <Text fontSize="3xl" paddingRight="50px" marginBottom={"20%"}>1.Tell us your preferences</Text>
-                    <Checkbox> <span className="option">Chef Favorites</span></Checkbox>
-                    <Checkbox><span className="option">Wellness</span> </Checkbox>
-                    <Checkbox><span className="option">Family Friendly</span></Checkbox>
-                    <Checkbox><span className="option">Fast & Easy</span></Checkbox>
-                    <Checkbox><span className="option">Veggies</span></Checkbox>               
-                </div>
-                <Center height='450px'>
-                    <Divider orientation='vertical' />
-                </Center>
-                <div className="prefright">
-                    <Text fontSize="3xl" paddingLeft="50px" paddingRight={"20px"} marginBottom={"20%"}>Select your plan</Text>
-                    <div className="serving">
-                        <Text className="serve" marginTop={"5px"} marginLeft={"20px"} marginRight={"40px"}>Number of servings:</Text>
-                        <Tabs variant='unstyled'>
-                            <TabList>
-                                <Tab _selected={{ color: 'white', bg: 'blue.900' }}>2</Tab>
-                                <Tab _selected={{ color: 'white', bg: 'blue.900' }}>4</Tab>
-                            </TabList>
-                            <TabPanels>
-                                <TabPanel>
-                                    <Box className="summary" maxW={"lg"} paddingLeft={"10px"}>
-                                        <Text fontSize="4xl" color={"white"} marginLeft={"20px"} marginRight={"20px"}><b>Order Summary</b></Text>
-                                        <Text color={"white"} fontSize={"2xl"} marginLeft={"10px"}>Price per serving: <span className="info">${price1}</span></Text>
-                                        <Text color={"white"} fontSize={"2xl"}>Shipping: <span className="info">FREE</span></Text>
-                                        <Text color={"white"} fontSize={"2xl"}>Total suborder:<span className="info">${2*price1}</span></Text>
-                                    </Box>
-                                </TabPanel>
-                                <TabPanel>
-                                    <Box className="summary">
-                                        <Text fontSize="4xl" color={"white"} marginLeft={"20px"} marginRight={"20px"}><b>Order Summary</b></Text>
-                                        <Text color={"white"} fontSize={"2xl"} marginLeft={"10px"}>Price per serving: <span className="info">${price2}</span></Text>
-                                        <Text color={"white"} fontSize={"2xl"}>Shipping: <span className="info">FREE</span></Text>
-                                        <Text color={"white"} fontSize={"2xl"}>Total suborder:<span className="info">${4*price2}</span></Text>
-                                    </Box>
-                                </TabPanel>
-                            </TabPanels>
-                        </Tabs>
+                <Box borderRadius="5%" width="100%" bg="#1A365D" marginTop="10%">
+                    <Text fontFamily="Audiowide" color="white" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom={{lg:"3%",md:"6%",base:"10%"}} >Choose your meal type</Text>
+                    <div className="plansec">
+                        <div>
+                            <Text color="white" fontSize={{lg:"2xl",md:"2xl",base:"lg"}}>Choose Your Preferences</Text>
+                            <fieldset class="checkbox-group">
+                                {chkbox.map(el=>(
+                                    <div class="checkbox">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox" class="checkbox-input" value={el.name} />
+                                            <span class="checkbox-tile">
+                                                <span class="checkbox-icon">
+                                                    <Avatar size="sm" src={el.icon} />
+                                                </span>
+                                                <span fontFamily="Audiowide" class="checkbox-label">{el.name}</span>
+                                            </span>
+                                        </label>
+                                    </div>    
+                                ))}
+                            </fieldset>
+                        </div>
+                        <div>
+                            <Avatar size={{lg:"3xl",md:"xl",base:"lg"}} src={chefhat} alt="Chef hat icon"></Avatar> <br />
+                            <Text fontSize="xl" fontFamily="Audiowide" color="white"><i>EAT LIKE A KING!!!</i></Text>
+                        </div>
                     </div>
-                </div>
-            </Box>
+                </Box>
             </Center>
-            <div className="choose">
-                <Text fontSize={"4xl"}>WHY CHOOSE A <br />Blue Apron Meal Kit?</Text>
-                <SimpleGrid columns={[2, null, 3]} spacingX='40px' spacingY='20px'>
-                    <Box height='80px' marginTop={"20%"} marginBottom={"10%"}>
-                        <Container>
-                            <b> Well-balanced meals</b> <br />Choose from an ever-changing mix of menu options featuring meat, poultry, fish, seafood and more.
-                        </Container>
-                    </Box>
-                    <Box height='80px' marginTop={"20%"} marginBottom={"10%"}>
-                        <Container>
-                            <b>Chef-approved recipes</b> <br />Choose from an ever-changing mix of menu options featuring meat, poultry, fish, seafood and more.
-                        </Container>
-                    </Box>
-                    <Box height='80px' marginTop={"20%"} marginBottom={"10%"}>
-                        <Container>
-                            <b>Your plan, your way</b> <br />Cooking with us is always on your terms. Adjust your servings and delivery day based on that week’s needs. Need to skip a week or cancel? No problem. As long as your order hasn’t been processed, you won’t be charged.
-                        </Container>
-                    </Box>
-                    <Box height='80px' marginTop={"20%"} marginBottom={"10%"}>
-                        <Container>
-                            <b> Tell us what you think </b> <br />Our culinary team reads every review and creates recipes based on your ratings. Tell us what you like and what you don’t on the app. (Don’t worry, our chefs can take the heat!)
-                        </Container>
-                    </Box>
-                    <Box height='80px' marginTop={"20%"} marginBottom={"10%"}>
-                        <Container>
-                            <b>A more sustainable way to cook</b> <br />When you cook with Blue Apron, you’re doing more than making delicious meals. Our meal kits include perfectly portioned ingredients to cut down on food waste in your home.
-                        </Container>
-                    </Box>
-                    <Box height='80px' marginTop={"20%"} marginBottom={"10%"}>
-                        <Container>
-                            <b>We’re sticklers for quality</b> <br />Our team of experts aim to source from suppliers that meet our standards for sustainable farming practices, high-quality produce, and unique ingredients.
-                        </Container>
-                    </Box>
-                </SimpleGrid>
-            </div>
+            <Button variant="outline" _hover={{bg:"#0BC5EA",color:"black",transition:"0.3s ease-in-out"}} fontFamily="Audiowide" borderRadius="40px" padding="50px" marginTop={{lg:"7%",md:"20%",base:"30%"}} marginBottom={{lg:"5%",md:"7%",base:"9%"}} onClick={()=>
+                {
+                    window.location='http://localhost:3001/FoodMenu'
+                }}>BROWSE OUR MENUS
+            </Button>
             <Center>
-                <Text className="question" fontSize={"5xl"} color={color}>Frequently Asked Questions</Text>
+                <Box width="100%" bg="#4299E1">
+                    <Text color="white" fontFamily="Audiowide" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom="5%">WHY CHOOSE A <br /><Text color="#1A365D">Blue Apron Meal Kit?</Text></Text>
+                    <SimpleGrid columns={[1, null, 3]} spacing='40px' marginBottom="5%">
+                        <Container color="white" fontFamily="Audiowide" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={sustainable} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
+                        <Container color="white" fontFamily="Audiowide" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={calender} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
+                        <Container color="white" fontFamily="Audiowide" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={safety} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
+                    </SimpleGrid>
+                </Box>
             </Center>
-            <div className="question">
-            {fData.map((el) => {
+            <Center>
+                <Box width="100%" marginTop="7%">
+                <Text fontFamily="Audiowide" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom="2%">FREQUENTLY ASKED QUESTIONS</Text>
+                {fData.map((el) => {
               return (
-                <Accordion allowMultiple>
+                <Accordion alignItem="center" marginLeft="25%" width="50%" allowMultiple>
                     <AccordionItem color={color}>
-                    {({ isExpanded }) => (
-                    <>
-                        <h2>
-                        <AccordionButton color={color}>
-                            
-                            <Box as="span" flex='1' textAlign='left'>
-                                <span className="question" color="color">{el.question}</span>
-                            </Box>
-                            {isExpanded ? (
-                            <MinusIcon fontSize='12px' />
-                            ) : (
-                            <AddIcon fontSize='12px' />
-                            )}
-                        </AccordionButton>
-                        </h2>
-                        <AccordionPanel pb={4} color={color}>
-                            <p>{el.answer}</p>.
-                        </AccordionPanel>
-                    </>
-                   )}
-                </AccordionItem>
-                </Accordion>
+                        {({ isExpanded }) => (
+                        <>
+                            <h2>
+                            <AccordionButton color={color}>
+                                
+                                <Box as="span" flex='1' textAlign='center'>
+                                    <span className="question" color="color">{el.question}</span>
+                                </Box>
+                                {isExpanded ? (
+                                <MinusIcon fontSize='12px' />
+                                ) : (
+                                <AddIcon fontSize='12px' />
+                                )}
+                            </AccordionButton>
+                            </h2>
+                            <AccordionPanel pb={4} color={color}>
+                                <p>{el.answer}</p>.
+                            </AccordionPanel>
+                        </>
+                    )}
+                    </AccordionItem>
+                    </Accordion>
 
-              );
-            })}
-            </div>
+                );
+                })}
+                </Box>
+            </Center>        
         </div>
     )
 }
