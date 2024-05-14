@@ -29,7 +29,7 @@ export const MenuCard = ({ id,image,content,price }) => {
 
   return (
     <div id="Card">
-        <Card maxW='sm'  marginRight={"5%"} marginBottom={"5%"}>
+        <Card fontFamily="Audiowide" maxW='sm'  marginRight={"5%"} marginBottom={"5%"}>
           <CardBody>
             <Image
               src={image}

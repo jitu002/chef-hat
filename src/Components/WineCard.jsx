@@ -2,11 +2,15 @@ import "./styles.css";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
-import { Image,CardBody,Card,Stack,Text, CardFooter,Button } from "@chakra-ui/react";
+import { Image,CardBody,Card,Stack,Text, CardFooter,Button,useColorMode,useColorModeValue } from "@chakra-ui/react";
 export const WineCard = ({ id,image,heading,content,price }) => {
   const navigate = useNavigate();
 
   const { addToCart, removeFromCart } = useContext(CartContext);
+  const { toggleColorMode } = useColorMode()
+
+  const color = useColorModeValue('blue.900', 'white')
+
 /*
   function nav() {
     navigate(`/products/${id}`);
@@ -25,7 +29,7 @@ export const WineCard = ({ id,image,heading,content,price }) => {
 
   return (
     <div id="Card">
-        <Card maxW='sm' marginBottom={"5%"} marginLeft={"5%"}>
+        <Card fontFamily="Audiowide" maxW='sm' marginBottom={"5%"} marginLeft={"5%"}>
           <CardBody>
             <Image
               src={image}
@@ -34,12 +38,12 @@ export const WineCard = ({ id,image,heading,content,price }) => {
               className="imgeffect"
             />
             <Stack mt='3' spacing='1'>
-              <Text className="banner1" fontSize="3xl">{heading}</Text>
-              <Text className="banner1" fontSize="2xl" marginTop={"20px"}>{content}</Text>
+              <Text fontSize={{lg:"3xl",md:"xl",base:"md"}}>{heading}</Text>
+              <Text fontSize={{lg:"18px",md:"16px",base:"14px"}} marginTop={"20px"}>{content}</Text>
             </Stack>
           </CardBody>
           <CardFooter className="foot">
-            <Text fontSize="3xl">₹{price}</Text>
+            <Text fontSize={{lg:"3xl",md:"xl",base:"md"}} color={color}>₹{price}</Text>
             <Button onClick={add} colorScheme="messenger" variant="ghost" fontSize="2xl">Add</Button>
           </CardFooter>
         </Card>

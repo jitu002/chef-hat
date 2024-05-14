@@ -7,9 +7,10 @@ Button{
 }
   .items {
     position: sticky;
-    font-size: 18px;
+    font-size: 25px;
     padding-top: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
   }
   .items:hover {
     color: rgb(80, 154, 219);
