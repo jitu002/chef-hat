@@ -29,7 +29,7 @@ export const WineCard = ({ id,image,heading,content,price }) => {
 
   return (
     <div id="Card">
-        <Card fontFamily="Audiowide" maxW='sm' marginBottom={"5%"} marginLeft={"5%"}>
+        <Card fontFamily="quicksand" maxW='sm' marginBottom={"5%"} marginLeft={"5%"}>
           <CardBody>
             <Image
               src={image}
@@ -43,7 +43,7 @@ export const WineCard = ({ id,image,heading,content,price }) => {
             </Stack>
           </CardBody>
           <CardFooter className="foot">
-            <Text fontSize={{lg:"3xl",md:"xl",base:"md"}} color={color}>₹{price}</Text>
+            <Text fontFamily="quicksand" fontSize={{lg:"3xl",md:"xl",base:"md"}} color={color}>₹{price}</Text>
             <Button onClick={add} colorScheme="messenger" variant="ghost" fontSize="2xl">Add</Button>
           </CardFooter>
         </Card>

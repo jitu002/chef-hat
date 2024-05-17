@@ -17,7 +17,7 @@ export const FootInfo=()=>{
                 <Divider orientation='vertical' />
             </Center>
             <div className='search'>
-                <Text  fontSize={{lg:"2xl",md:"xl",base:"md"}}>
+                <Text fontFamily="caveat"  fontSize={{lg:"4xl",md:"2xl",base:"xl"}}>
                     Discover What's Cooking
                 </Text>
                 <input type="email" placeholder='Enter your @ email' />
@@ -26,7 +26,7 @@ export const FootInfo=()=>{
                     <Divider orientation='vertical' />
                 </Center>
             <div className='search'>
-                <Text  fontSize={{lg:"2xl",md:"xl",base:"md"}}>
+                <Text  fontFamily="caveat"  fontSize={{lg:"4xl",md:"2xl",base:"xl"}}>
                     Taste the best
                 </Text>
             </div>

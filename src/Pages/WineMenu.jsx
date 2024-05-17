@@ -32,20 +32,20 @@ export const WineMenu = () => {
   return (
     <div className="menubody">
       <div className="head">
-        <Text  fontSize={{lg:"7xl",md:"5xl",base:"2xl"}} color={color} className="banner1">
+        <Text fontFamily="cinzel"  fontSize={{lg:"7xl",md:"5xl",base:"2xl"}} color={color} className="banner1">
           Quench your thirst
         </Text>
-        <Text  fontSize={{lg:"4xl",md:"2xl",base:"lg"}} color={color} className="banner1" marginTop={"20px"}>
+        <Text fontFamily="cinzel"  fontSize={{lg:"4xl",md:"2xl",base:"lg"}} color={color} className="banner1" marginTop={"20px"}>
           Summer wine bundles
         </Text>
       </div>
       <div>
       <Tabs isFitted position="relative" variant="unstyled">
         <TabList className="filter">
-          <Tab className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>All</Tab>
-          <Tab className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>₹20-₹60</Tab>
-          <Tab className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>₹60-₹100</Tab>
-          <Tab className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>More than ₹100</Tab>
+          <Tab fontFamily="poetsen one" className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>All</Tab>
+          <Tab fontFamily="poetsen one" className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>₹20-₹60</Tab>
+          <Tab fontFamily="poetsen one" className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>₹60-₹100</Tab>
+          <Tab fontFamily="poetsen one" className="option" fontSize={{lg:"3xl",md:"xl",base:"14px"}}>More than ₹100</Tab>
         </TabList>
         <TabIndicator
           mt="-1.5px"

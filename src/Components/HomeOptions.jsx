@@ -12,7 +12,7 @@ export const HomeOptions = ({ id,image,heading,content }) => {
     <div className="Card">
         <Box height='80px'>
             <Image src={image} className="imgeffect" />
-            <Text marginTop={'10px'} color={color}>
+            <Text fontFamily="quicksand" marginTop={'10px'} color={color}>
                 <b>{heading}</b> <br />{content}
             </Text>
         </Box>

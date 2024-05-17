@@ -5,7 +5,6 @@ import { Text,SimpleGrid,Center,Box,Avatar,
 import { useState,useEffect } from "react";
 import { AddIcon,MinusIcon } from "@chakra-ui/icons"
 import "./styles.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import hat from "../Resources/icons/chef.png"
 import wellness from "../Resources/icons/vegan.png"
 import family from "../Resources/icons/family.png"
@@ -69,16 +68,16 @@ export const Plans=()=>{
     return(
         <div>
             <div className="planshead">
-                <Text fontSize={{lg:"4xl",md:"2xl",base:"lg"}} color={color}> <b>Personalize your meal kit</b></Text>
-                <Text fontSize={{lg:"2xl",md:"2xl",base:"lg"}} color={color}>Get excited -your choice of 70+ weekly meals is just a few steps away!
+                <Text fontFamily="cinzel" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} color={color}> <b>Personalize your meal kit</b></Text>
+                <Text fontFamily="quicksand" fontSize={{lg:"2xl",md:"2xl",base:"lg"}} color={color}>Get excited -your choice of 70+ weekly meals is just a few steps away!
                 </Text>
             </div>
             <Center>
                 <Box borderRadius="5%" width="100%" bg="#1A365D" marginTop="10%">
-                    <Text fontFamily="Audiowide" color="white" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom={{lg:"3%",md:"6%",base:"10%"}} >Choose your meal type</Text>
+                    <Text fontFamily="quicksand" color="white" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom={{lg:"3%",md:"6%",base:"10%"}} >Choose your meal type</Text>
                     <div className="plansec">
                         <div>
-                            <Text color="white" fontSize={{lg:"2xl",md:"2xl",base:"lg"}}>Choose Your Preferences</Text>
+                            <Text fontFamily="quicksand" color="white" fontSize={{lg:"2xl",md:"2xl",base:"lg"}}>Choose Your Preferences</Text>
                             <fieldset class="checkbox-group">
                                 {chkbox.map(el=>(
                                     <div class="checkbox">
@@ -88,7 +87,7 @@ export const Plans=()=>{
                                                 <span class="checkbox-icon">
                                                     <Avatar size="sm" src={el.icon} />
                                                 </span>
-                                                <span fontFamily="Audiowide" class="checkbox-label">{el.name}</span>
+                                                <span fontFamily="quicksand" class="checkbox-label">{el.name}</span>
                                             </span>
                                         </label>
                                     </div>    
@@ -97,29 +96,29 @@ export const Plans=()=>{
                         </div>
                         <div>
                             <Avatar size={{lg:"3xl",md:"xl",base:"lg"}} src={chefhat} alt="Chef hat icon"></Avatar> <br />
-                            <Text fontSize="xl" fontFamily="Audiowide" color="white"><i>EAT LIKE A KING!!!</i></Text>
+                            <Text fontSize="xl" fontFamily="quicksand" color="white"><i>EAT LIKE A KING!!!</i></Text>
                         </div>
                     </div>
                 </Box>
             </Center>
-            <Button variant="outline" _hover={{bg:"#0BC5EA",color:"black",transition:"0.3s ease-in-out"}} fontFamily="Audiowide" borderRadius="40px" padding="50px" marginTop={{lg:"7%",md:"20%",base:"30%"}} marginBottom={{lg:"5%",md:"7%",base:"9%"}} onClick={()=>
+            <Button variant="outline" _hover={{bg:"#0BC5EA",color:"black",transition:"0.3s ease-in-out"}} fontFamily="poetsen one" borderRadius="40px" padding="50px" marginTop={{lg:"7%",md:"20%",base:"30%"}} marginBottom={{lg:"5%",md:"7%",base:"9%"}} onClick={()=>
                 {
                     window.location='http://localhost:3001/FoodMenu'
                 }}>BROWSE OUR MENUS
             </Button>
             <Center>
                 <Box width="100%" bg="#4299E1">
-                    <Text color="white" fontFamily="Audiowide" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom="5%">WHY CHOOSE A <br /><Text color="#1A365D">Blue Apron Meal Kit?</Text></Text>
+                    <Text color="white" fontFamily="cinzel" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom="5%">WHY CHOOSE A <br /><Text color="#1A365D">Blue Apron Meal Kit?</Text></Text>
                     <SimpleGrid columns={[1, null, 3]} spacing='40px' marginBottom="5%">
-                        <Container color="white" fontFamily="Audiowide" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={sustainable} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
-                        <Container color="white" fontFamily="Audiowide" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={calender} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
-                        <Container color="white" fontFamily="Audiowide" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={safety} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
+                        <Container color="white" fontFamily="cinzel" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={sustainable} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
+                        <Container color="white" fontFamily="cinzel" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={calender} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
+                        <Container color="white" fontFamily="cinzel" fontSize={{lg:"2xl",md:"xl",base:"lg"}}><Avatar src={safety} size="lg" /><br />A more sustainable way to cook <br />Perfectly portioned ingredients to cut down on food waste in your home.</Container>
                     </SimpleGrid>
                 </Box>
             </Center>
             <Center>
                 <Box width="100%" marginTop="7%">
-                <Text fontFamily="Audiowide" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom="2%">FREQUENTLY ASKED QUESTIONS</Text>
+                <Text fontFamily="cinzel" fontSize={{lg:"4xl",md:"2xl",base:"lg"}} marginBottom="2%">FREQUENTLY ASKED QUESTIONS</Text>
                 {fData.map((el) => {
               return (
                 <Accordion alignItem="center" marginLeft="25%" width="50%" allowMultiple>

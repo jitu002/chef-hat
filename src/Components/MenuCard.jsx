@@ -29,7 +29,7 @@ export const MenuCard = ({ id,image,content,price }) => {
 
   return (
     <div id="Card">
-        <Card fontFamily="Audiowide" maxW='sm'  marginRight={"5%"} marginBottom={"5%"}>
+        <Card fontFamily="quicksand" maxW='sm'  marginRight={"5%"} marginBottom={"5%"}>
           <CardBody>
             <Image
               src={image}
@@ -42,7 +42,7 @@ export const MenuCard = ({ id,image,content,price }) => {
             </Stack>
           </CardBody>
           <CardFooter className="foot">
-            <Text fontSize={{lg:"3xl",md:"xl",base:"lg"}} color={color}>₹{price}/-</Text>
+            <Text fontFamily="quicksand" fontSize={{lg:"3xl",md:"xl",base:"lg"}} color={color}>₹{price}/-</Text>
             <Button onClick={add} colorScheme="messenger" variant="ghost" fontSize="2xl">Add</Button>
           </CardFooter>
         </Card>
