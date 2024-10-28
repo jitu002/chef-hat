@@ -107,39 +107,58 @@ export const Navbar=()=>{
     }
   }
 
-  async function submitlogin(){
-      const response = await fetch('http://localhost:3000/users');
-      let data1=await response.json()
-      if(email==="" || user==="" || pass===""){
+  async function submitlogin() {
+    if (email === "" || user === "" || pass === "") {
         toast({
-          title: `Invalid credentials`,
-          position: 'top',
-          status:'error',
-          isClosable: true,
-        })
+            title: `Invalid credentials`,
+            position: 'top',
+            status: 'error',
+            isClosable: true,
+        });
+        return;
     }
-      else{
-        let flag=0;
-          for(let i=0;i<data1.length;i++)
-      {
-          if(email===data1[i].email && user===data1[i].username && pass===data1[i].password)
-          {
-              handleLogin()
-              setName(data1[i].name)
-              flag=1
-          }
-      }
-      if(flag===0){
+
+    try {
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username: user, password: pass }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            // Successful login
+            handleLogin();
+            setName(data.name); // Optionally set the user's name from the server response if it includes it
+            toast({
+                title: `Login successful`,
+                position: 'top',
+                status: 'success',
+                isClosable: true,
+            });
+        } else {
+            // Handle invalid login
+            toast({
+                title: `Invalid credentials`,
+                position: 'top',
+                status: 'error',
+                isClosable: true,
+            });
+        }
+    } catch (error) {
+        console.error('Error logging in:', error);
         toast({
-          title: `Invalid credentials`,
-          position: 'top',
-          status:'error',
-          isClosable: true,
-        })
-      }
-      
-      }  
+            title: `Login failed`,
+            position: 'top',
+            status: 'error',
+            isClosable: true,
+        });
     }
+  }
+
     
   return (
     <div>

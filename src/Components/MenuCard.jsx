@@ -11,18 +11,7 @@ export const MenuCard = ({ id,image,content,price }) => {
   const color = useColorModeValue('blue.900', 'white')
 
   const { addToCart, removeFromCart } = useContext(CartContext);
-/*
-  function nav() {
-    navigate(`/products/${id}`);
-  }
 
-  function add() {
-    addToCart({ id, brand, img, price, details, category });
-  }
-
-  function Delete() {
-    removeFromCart({ id, brand, img, price, details, category });
-  }*/
   function add() {
     addToCart({ id,image,content,price });
   }
