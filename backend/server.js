@@ -1,13 +1,17 @@
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
+require('dotenv').config();
 
+const apiurl=process.env.API_URL;
 
 const port = 3000;
 const app = express();
 
-const url = "mongodb+srv://ajtech1902:chefHatdb@chefcluster.951zzvt.mongodb.net/backend?retryWrites=true&w=majority&appName=chefCluster"
+const url = apiurl
+console.log("MongoDB URI:", apiurl);
 
 app.use(cors());
 app.use(express.json());
