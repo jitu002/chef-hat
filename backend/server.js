@@ -11,7 +11,6 @@ const port = 3000;
 const app = express();
 
 const url = apiurl
-console.log("MongoDB URI:", apiurl);
 
 app.use(cors());
 app.use(express.json());
