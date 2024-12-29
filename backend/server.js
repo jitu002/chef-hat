@@ -90,7 +90,7 @@ app.get("/accordions",async(req,res)=>{
         res.json(accordion)    
     }
     catch{
-        res.status(500).json({error:"Errot fetching accordions"})
+        res.status(500).json({error:"Error fetching accordions"})
     }
 })
 
