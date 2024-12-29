@@ -79,7 +79,7 @@ export const Navbar=()=>{
   async function SubmitEvent(){
     if(name!=="" || email!=="" || user!=="" ||pass!==""){
       var data={name:name,username:user,email:email,password:pass};
-      const response = await fetch('http://localhost:3000/users', {
+      const response = await fetch('https://chefhat.netlify.app/.netlify/functions/auth/register', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -119,7 +119,7 @@ export const Navbar=()=>{
     }
 
     try {
-        const response = await fetch('http://localhost:3000/login', {
+        const response = await fetch('https://chefhat.netlify.app/.netlify/functions/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

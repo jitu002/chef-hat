@@ -8,6 +8,7 @@ import raj from "../Resources/developers/raj.jpg"
 import prayas from "../Resources/developers/prayas.jpg"
 import shreya from "../Resources/developers/shreya.jpg"
 import subashis from "../Resources/developers/subashis.jpg"
+import soumya from "../Resources/developers/soumya.jpg"
 
 
 export const Footer = () => {
@@ -49,6 +50,12 @@ export const Footer = () => {
         "name":"Subashis Samantaray",
         "desgination":"Programmer",
         "description":"CS grad with a knack for programming and deeply invested in solving even the minutest problems.",
+      },
+      {
+        "image":soumya,
+        "name":"Soumyajeet Parida",
+        "designation":"Programmer",
+        "description":"Electrical grad with a knack for making new things along with being a part time prankster."
       }
     ]
 

@@ -10,7 +10,7 @@ import { HomeOptions } from '../Components/HomeOptions'
 import "./styles.css";
 
 export const Homepage = () => {
-  const api ="http://localhost:3000/weekoptions";
+  const api ="https://chefhat.netlify.app/.netlify/functions/weekOptions";
 
 
   const [fData, setFData] = useState([]);

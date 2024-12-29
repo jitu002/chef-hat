@@ -15,7 +15,7 @@ export const WineMenu = () => {
 
 
   const api =
-    "http://localhost:3000/wine";
+    "https://chefhat.netlify.app/.netlify/functions/wine";
 
   const [fData, setFData] = useState([]);
 

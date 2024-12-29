@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { MenuCard } from "../Components/MenuCard";
 import "./styles.css";
 export const FoodMenu = () => {
-  const api ="http://localhost:3000/items";
+  const api ="https://chefhat.netlify.app/.netlify/functions/items";
 
   const [fData, setFData] = useState([]);
   const { toggleColorMode } = useColorMode()

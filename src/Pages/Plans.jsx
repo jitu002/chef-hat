@@ -18,7 +18,7 @@ import safety from "../Resources/icons/food-safety.png"
 
 export const Plans=()=>{
 
-    const api ="http://localhost:3000/accordions";
+    const api ="https://chefhat.netlify.app/.netlify/functions/accordions";
 
     const chkbox=[
         {
@@ -49,7 +49,7 @@ export const Plans=()=>{
     const [fData, setFData] = useState([]);
 
 
-    const fetchData = async () => {
+    /*const fetchData = async () => {
         let res = await fetch(api);
         let data1 = await res.json();
         setFData(data1);
@@ -57,7 +57,25 @@ export const Plans=()=>{
     
       useEffect(() => {
         fetchData();
-      }, []);
+      }, []);*/
+
+    const fetchData = async () => {
+        try {
+            let res = await fetch(api);
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            let data1 = await res.json();
+            console.log('Fetched Data:', data1); // Debugging
+            setFData(data1);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    
+    useEffect(() => {
+        fetchData();
+    }, []);
 
     let price2=4.62
     let price1=1.50

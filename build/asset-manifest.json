@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d65019c9.css",
-    "main.js": "/static/js/main.aabd1987.js",
+    "main.js": "/static/js/main.9755222b.js",
     "static/media/inside.jpeg": "/static/media/inside.086e1dd53a4cbcc7af75.jpeg",
     "static/media/favo.jpeg": "/static/media/favo.654cdbd26072f6c54537.jpeg",
     "static/media/glass.png": "/static/media/glass.12b76de3597b1394430d.png",
@@ -26,15 +26,16 @@
     "static/media/vegan.png": "/static/media/vegan.24c4c49bfeb0851d4c97.png",
     "static/media/vegetables.png": "/static/media/vegetables.a9db54fcdae4d316fd49.png",
     "static/media/family.png": "/static/media/family.c6582a7517dd9a3ae3e7.png",
+    "static/media/soumya.jpg": "/static/media/soumya.06ffa40c2623a7fafac2.jpg",
     "static/media/stopwatch.png": "/static/media/stopwatch.a4e0e192f5eeb7615ab6.png",
     "static/media/calendar.png": "/static/media/calendar.7498b444300b4c2032f6.png",
     "static/media/chef.png": "/static/media/chef.728fd1445de0e0abb8b0.png",
     "index.html": "/index.html",
     "main.d65019c9.css.map": "/static/css/main.d65019c9.css.map",
-    "main.aabd1987.js.map": "/static/js/main.aabd1987.js.map"
+    "main.9755222b.js.map": "/static/js/main.9755222b.js.map"
   },
   "entrypoints": [
     "static/css/main.d65019c9.css",
-    "static/js/main.aabd1987.js"
+    "static/js/main.9755222b.js"
   ]
 }
