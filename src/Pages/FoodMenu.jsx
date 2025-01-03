@@ -1,9 +1,12 @@
-import { Text,Tabs, TabList, TabPanels, Tab, TabPanel,TabIndicator,useColorMode,useColorModeValue } from "@chakra-ui/react";
+import { Text,Tabs, TabList, TabPanels, Tab, TabPanel,TabIndicator,useColorMode,useColorModeValue,Button } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { MenuCard } from "../Components/MenuCard";
 import "./styles.css";
 export const FoodMenu = () => {
-  const api ="https://chefhat.netlify.app/.netlify/functions/items";
+  const api ="https://chef-hat.onrender.com/items";
+
+  const navigate=useNavigate();
 
   const [fData, setFData] = useState([]);
   const { toggleColorMode } = useColorMode()
@@ -78,6 +81,9 @@ export const FoodMenu = () => {
           </TabPanel>
         </TabPanels>
       </Tabs>
+      <Button size="lg" colorScheme="teal" variant="outline" onClick={()=>navigate("/cart")}>
+        Checkout
+      </Button>
       </div> 
     </div>
   );

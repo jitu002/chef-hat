@@ -26,11 +26,10 @@
   }
   
   .welcome {
-    padding-top: 3%;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin:0 0 40px 40px ;
     color: rgb(2, 29, 115);
     
     
@@ -118,40 +117,7 @@
     font-optical-sizing: auto;
 
   }
-  .revcard{
-    margin-top:100px ;
-    
-    opacity: 0.9;
-    background-color: white;
-  }
-  .carbon{
-    display: flex;
-    flex-direction: column;
-    background-image: url("https://media.blueapron.com/assets/registration/homepage/green-field.png?height=400&quality=90");
-    width: 50%;
-    height:50vh;
-    border-radius: 35px;
-    background-size: cover;
-    
-    color: white;
-    margin-left: 25%;
-    margin-top: 5%;
-    padding-top: 5%;
-    margin-bottom: 5%;
-  }
-  
-  .getstarted{
-    background-image: url("https://media.blueapron.com/assets/registration/homepage/gnocchi-ingredients.webp?height=400&quality=90");
-    width:80%;
-    height:60vh;
-    background-size: cover;
-    border-radius: 35px;
-    margin-left:10%;
-    margin-bottom: 20px;
-    padding-top: 5%;
-    
-    font-size:25px;
-}
+
 .planbtn3{
     border-radius: 40px;
     background-color: rgb(2, 29, 115);
@@ -159,7 +125,6 @@
     font-size:19px;
     padding: 10px 10px 10px 10px;
     margin-bottom: 10px;
-    margin-left: 10px;
     font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   
@@ -418,11 +383,7 @@
     margin-left: 50px;
     font-size: 18px;
   }
-  .carbon{
-    width:100%;
-    margin-left: 1%;
-    margin-top: 1px;
-  }
+  
   .swiper1{
     margin-bottom: 5px;
   }

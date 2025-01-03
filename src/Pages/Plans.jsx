@@ -14,11 +14,13 @@ import chefhat from "../Resources/chef-hat.png"
 import sustainable from "../Resources/icons/planet-earth.png"
 import calender from "../Resources/icons/calendar.png"
 import safety from "../Resources/icons/food-safety.png"
+import { useNavigate } from "react-router-dom";
 
 
 export const Plans=()=>{
 
-    const api ="https://chefhat.netlify.app/.netlify/functions/accordions";
+    const api ="https://chef-hat.onrender.com/accordions";
+    const navigate=useNavigate();
 
     const chkbox=[
         {
@@ -48,16 +50,6 @@ export const Plans=()=>{
 
     const [fData, setFData] = useState([]);
 
-
-    /*const fetchData = async () => {
-        let res = await fetch(api);
-        let data1 = await res.json();
-        setFData(data1);
-      };
-    
-      useEffect(() => {
-        fetchData();
-      }, []);*/
 
     const fetchData = async () => {
         try {
@@ -121,7 +113,7 @@ export const Plans=()=>{
             </Center>
             <Button variant="outline" _hover={{bg:"#0BC5EA",color:"black",transition:"0.3s ease-in-out"}} fontFamily="poetsen one" borderRadius="40px" padding="50px" marginTop={{lg:"7%",md:"20%",base:"30%"}} marginBottom={{lg:"5%",md:"7%",base:"9%"}} onClick={()=>
                 {
-                    window.location='http://localhost:3001/FoodMenu'
+                    navigate("/FoodMenu");
                 }}>BROWSE OUR MENUS
             </Button>
             <Center>

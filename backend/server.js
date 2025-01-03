@@ -151,7 +151,7 @@ app.post('/users', async (req, res) => {
     }
   });
 
-  app.post('/login', async (req, res) => {
+app.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
 
@@ -171,6 +171,7 @@ app.post('/users', async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

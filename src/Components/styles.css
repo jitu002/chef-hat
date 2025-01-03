@@ -5,21 +5,21 @@
 Button{
   font-family: Audiowide
 }
-  .items {
-    position: sticky;
-    font-size: 25px;
-    padding-top: 20px;
-    font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  }
-  .items:hover {
-    color: rgb(80, 154, 219);
-    transition: 0.3s ease-in-out;
-    border-bottom: 2px solid  rgb(80, 154, 219);;
-    padding: 2px;
-  }
+.items {
+  position: sticky;
+  
+  padding-top: 20px;
+ 
+font-optical-sizing: auto;
+}
+.items:hover {
+  color: rgb(80, 154, 219);
+  transition: 0.3s ease-in-out;
+}
+
+
   .footerdsgn{
-    background-color:rgb(0, 61, 94);
+    background-color:rgb(2, 19, 73);
     color:white
   }
   .foot{

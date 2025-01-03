@@ -2,29 +2,27 @@ import "./styles.css";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
-import { Image,CardBody,Card,Stack,Text, CardFooter,Button,useColorMode,useColorModeValue } from "@chakra-ui/react";
-export const WineCard = ({ id,image,heading,content,price }) => {
-  const navigate = useNavigate();
+import { Image,CardBody,Card,Stack,Text, CardFooter,Button,useColorMode,useColorModeValue,Flex } from "@chakra-ui/react";
+import { AddIcon,MinusIcon } from "@chakra-ui/icons";
 
-  const { addToCart, removeFromCart } = useContext(CartContext);
+
+export const WineCard = ({ id,image,heading,content,price }) => {
+
+  const { addToCart, removeFromCart ,cart } = useContext(CartContext);
   const { toggleColorMode } = useColorMode()
 
   const color = useColorModeValue('blue.900', 'white')
 
-/*
-  function nav() {
-    navigate(`/products/${id}`);
-  }
+  const itemCount = cart?.reduce((count, item) => {
+    return item.id === id ? count + 1 : count;
+  }, 0);
 
   function add() {
-    addToCart({ id, brand, img, price, details, category });
+    addToCart({ id, image, content, price });
   }
 
-  function Delete() {
-    removeFromCart({ id, brand, img, price, details, category });
-  }*/
-  function add() {
-    addToCart({ id,image,heading,content,price });
+  function remove(){
+    removeFromCart({id,image,content,price})
   }
 
   return (
@@ -44,7 +42,17 @@ export const WineCard = ({ id,image,heading,content,price }) => {
           </CardBody>
           <CardFooter className="foot">
             <Text fontFamily="quicksand" fontSize={{lg:"3xl",md:"xl",base:"md"}} color={color}>₹{price}</Text>
-            <Button onClick={add} colorScheme="messenger" variant="ghost" fontSize="2xl">Add</Button>
+            <Button 
+            onClick={itemCount===0?add:null} 
+            colorScheme="messenger" 
+            variant={itemCount > 0 ? "solid" : "ghost"}
+            fontSize={itemCount > 0 ? "xl" : "2xl"}
+            >
+              {itemCount > 0 ? 
+              <Flex minWidth='max-content' alignItems='center' gap='8'>
+                <Button variant="outline" borderRadius="60px" onClick={add} ><AddIcon /></Button> {itemCount} <Button variant="outline" borderRadius="60px" onClick={remove} ><MinusIcon/></Button>
+              </Flex>   : "Add"}
+            </Button>
           </CardFooter>
         </Card>
     </div>

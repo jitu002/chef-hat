@@ -1,4 +1,5 @@
-import { Text,Tab,TabIndicator,TabPanels,TabPanel,Tabs,TabList,useColorMode,useColorModeValue } from "@chakra-ui/react";
+import { Text,Tab,TabIndicator,TabPanels,TabPanel,Tabs,TabList,useColorMode,useColorModeValue,Button } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { WineCard } from "../Components/WineCard";
 import "./styles.css";
@@ -8,14 +9,14 @@ import "./styles.css";
 export const WineMenu = () => {
 
 
-  const { toggleColorMode } = useColorMode()
+  const navigate=useNavigate();
 
   const color = useColorModeValue('blue.900', 'white')
 
 
 
   const api =
-    "https://chefhat.netlify.app/.netlify/functions/wine";
+    "https://chef-hat.onrender.com/wine";
 
   const [fData, setFData] = useState([]);
 
@@ -90,6 +91,9 @@ export const WineMenu = () => {
           </TabPanel>
         </TabPanels>
       </Tabs>
+      <Button size="lg" colorScheme="teal" variant="outline" onClick={()=>navigate("/cart")}>
+        Checkout
+      </Button>
       </div> 
     </div>
   );

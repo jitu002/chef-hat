@@ -16,8 +16,10 @@ import chop from "../Resources/wine/chop.png";
 import potato from "../Resources/wine/potato.png";
 import sauce from "../Resources/wine/sauce.png";
 import bottle1 from "../Resources/wine/bottle1.png"
+import { useNavigate } from 'react-router-dom';
 
 export const Wine=()=>{
+    const navigate=useNavigate();
     return(
         <div>
             <div className="body1">
@@ -30,7 +32,7 @@ export const Wine=()=>{
                     </Text>
                     <button className="planbtn" onClick={()=>
                     {
-                        window.location='http://localhost:3001/WineMenu'
+                        navigate('/WineMenu');
                     }}>Get Started</button>
                 </div>
             </div>
@@ -59,7 +61,7 @@ export const Wine=()=>{
                     </CardBody>
                     <button className="planbtn3" onClick={()=>
                     {
-                        window.location='http://localhost:3001/WineMenu'
+                        navigate('/WineMenu');
                     }}>Get Started</button>
                     </Card>
                 </Center>
@@ -117,7 +119,7 @@ export const Wine=()=>{
                 <Text color="white"fontFamily="poetsen one" fontSize={{lg:"5xl",md:"3xl",base:"xl"}}>Let's Raise a Glass</Text>
                 <button className="planbtn4" onClick={()=>
                     {
-                        window.location='http://localhost:3001/WineMenu'
+                        navigate('/WineMenu');
                     }}>Get Started</button>
             </div>       
         </div>

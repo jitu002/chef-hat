@@ -1,41 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.d65019c9.css",
-    "main.js": "/static/js/main.9755222b.js",
+    "main.css": "/static/css/main.dcefa85d.css",
+    "main.js": "/static/js/main.cf0285a6.js",
     "static/media/inside.jpeg": "/static/media/inside.086e1dd53a4cbcc7af75.jpeg",
     "static/media/favo.jpeg": "/static/media/favo.654cdbd26072f6c54537.jpeg",
     "static/media/glass.png": "/static/media/glass.12b76de3597b1394430d.png",
     "static/media/wiinn.jpg": "/static/media/wiinn.e4b3126d0c9f6087709d.jpg",
-    "static/media/ajit.jpg": "/static/media/ajit.c13e9983fefec3b0f4a7.jpg",
     "static/media/homeimage.jpeg": "/static/media/homeimage.17ba932bc5bd30f61400.jpeg",
     "static/media/sauce.png": "/static/media/sauce.7ed4909a9208463314e0.png",
     "static/media/chop.png": "/static/media/chop.fe97e434a08136931a9e.png",
     "static/media/beef.png": "/static/media/beef.d31a7445a898df8cb321.png",
     "static/media/cooking-pot.webp": "/static/media/cooking-pot.bb61746945600ed7c54a.webp",
-    "static/media/prayas.jpg": "/static/media/prayas.1796fea5e84bb3292f5b.jpg",
     "static/media/potato.png": "/static/media/potato.e2379ef0cd8c81a7f135.png",
-    "static/media/mki.jpg": "/static/media/mki.1bf36c414299fe86d0f7.jpg",
-    "static/media/raj.jpg": "/static/media/raj.59ca58af9ddd4d2e9c87.jpg",
     "static/media/bottle1.png": "/static/media/bottle1.2d5ed0388b6d0c69affe.png",
     "static/media/vineyard.png": "/static/media/vineyard.c446b55cb14280f00800.png",
-    "static/media/subashis.jpg": "/static/media/subashis.0ad137596f60862f940f.jpg",
     "static/media/planet-earth.png": "/static/media/planet-earth.1f99a1873b0722b85af7.png",
     "static/media/food-safety.png": "/static/media/food-safety.73e7cf2f96bceccc90a0.png",
-    "static/media/shreya.jpg": "/static/media/shreya.3f7d3eb09ea6e5b6e4bc.jpg",
     "static/media/chef-hat.png": "/static/media/chef-hat.8e43a5d3182229797b1d.png",
     "static/media/vegan.png": "/static/media/vegan.24c4c49bfeb0851d4c97.png",
     "static/media/vegetables.png": "/static/media/vegetables.a9db54fcdae4d316fd49.png",
     "static/media/family.png": "/static/media/family.c6582a7517dd9a3ae3e7.png",
-    "static/media/soumya.jpg": "/static/media/soumya.06ffa40c2623a7fafac2.jpg",
     "static/media/stopwatch.png": "/static/media/stopwatch.a4e0e192f5eeb7615ab6.png",
     "static/media/calendar.png": "/static/media/calendar.7498b444300b4c2032f6.png",
     "static/media/chef.png": "/static/media/chef.728fd1445de0e0abb8b0.png",
     "index.html": "/index.html",
-    "main.d65019c9.css.map": "/static/css/main.d65019c9.css.map",
-    "main.9755222b.js.map": "/static/js/main.9755222b.js.map"
+    "main.dcefa85d.css.map": "/static/css/main.dcefa85d.css.map",
+    "main.cf0285a6.js.map": "/static/js/main.cf0285a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.d65019c9.css",
-    "static/js/main.9755222b.js"
+    "static/css/main.dcefa85d.css",
+    "static/js/main.cf0285a6.js"
   ]
 }

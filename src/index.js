@@ -1,10 +1,10 @@
+// index.js
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import App from "./App";
 import { CartContextProvider } from "./Context/CartContext";
 import { LoginContextProvider } from "./Context/LoginContext";
-import { ColorModeScript } from '@chakra-ui/react'
 import theme from './theme'
 
 const rootElement = document.getElementById("root");
@@ -14,8 +14,8 @@ root.render(
   <BrowserRouter>
     <CartContextProvider>
       <LoginContextProvider>
-        <ChakraProvider>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+        <ChakraProvider theme={theme}>
           <App />
         </ChakraProvider>
       </LoginContextProvider>
